@@ -1,10 +1,10 @@
 ```mermaid
-C4Container
-    title Student Module Registration System - Container Diagram
+diagram C4Context
+    title Student Module Registration System - Context Diagram
+    
+    Person(Students, "Students", "Register for modules online.")
+    Person(Admin, "Administrators", "Manage module offerings and registration deadlines.")
+    System(System, "Student Module Registration System", "Handles registration and module data.")
 
-    Container(WebApp, "Web Application", "React", "User-facing interface.")
-    Container(API, "API Server", "Node.js/Express", "Handles registration logic.")
-    ContainerDb(Database, "Database", "MySQL", "Stores student and module data.")
-
-    WebApp --> API
-    API --> Database
+    Students --> System
+    Admin --> System
