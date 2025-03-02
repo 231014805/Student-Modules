@@ -1,10 +1,7 @@
 ```mermaid
-diagram C4Context
-    title Student Module Registration System - Context Diagram
-    
-    Person(Students, "Students", "Register for modules online.")
-    Person(Admin, "Administrators", "Manage module offerings and registration deadlines.")
-    System(System, "Student Module Registration System", "Handles registration and module data.")
+C4Context
+  title Real-Time Fitness Tracker Context Diagram
+  Person(user, "User", "Tracks fitness goals")
+  System(system, "Fitness Tracker", "Provides health insights")
+  user --> system
 
-    Students --> System
-    Admin --> System
